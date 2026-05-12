@@ -1,0 +1,117 @@
+{
+  "dataset": "WikiLingua (english)",
+  "n_samples": 20,
+  "note": "References are EN summaries translated to TR via MarianMT.",
+  "baseline_1": {
+    "approach": "EN article → mT5 (EN summary) → MarianMT (TR summary)",
+    "models": [
+      "csebuetnlp/mT5_multilingual_XLSum",
+      "Helsinki-NLP/opus-mt-tc-big-en-tr"
+    ],
+    "scores": {
+      "ROUGE-1": 13.31,
+      "ROUGE-2": 3.04,
+      "ROUGE-L": 10.01
+    },
+    "predictions": [
+      "Afrikalı gazetecilerden gelen mektup serimizde, Dr. John Wright hemşirelerin hastalarıyla nasıl iletişim kurduğuna bakıyor.",
+      "Facebook, kullanıcıların arkadaşlarıyla giriş yapmasına izin veren bir sosyal ağdır.",
+      "Facebook, kullanıcıların arkadaşlarıyla giriş yapmasına izin veren bir sosyal ağdır.",
+      "Bu, Facebook hesabınızla nasıl giriş yapacağınıza dair bir kılavuzdur.",
+      "Eğer bir kediyseniz, muhtemelen sizin için en büyük meydan okumadır.",
+      "BBC'nin haftalık The Boss serisi, dünyanın dört bir yanından farklı iş liderlerini profilliyor. Bu hafta size evcil kediniz hakkında konuşuyoruz.",
+      "Kedilerden aşırı kilolu olup olmadıklarını öğrenmek için bellerine ve kalçalarına bakmaları isteniyor. İşte bilmeniz gerekenler.",
+      "Afrikalı gazetecilerden gelen mektup serimizde Joseph Warungu, yemenin nasıl güvenli ve sağlıklı bir diyet olduğunu açıklıyor.",
+      "Afrikalı gazetecilerden gelen mektup serimizde Joseph Warungu, yüksek yoğunluklu egzersizlerin vücut yağlarını azaltmaya nasıl yardımcı olabileceğini açıklıyor.",
+      "Programlama dillerini temel bir şekilde kavramak istiyorsanız, öğrenmeye başladığınızda hangi dili seçeceğinizi bilmeniz gerekebilir.",
+      "BBC'nin haftalık The Boss serisi, dünyanın dört bir yanından farklı iş liderlerini profilliyor. Bu hafta programlama uzmanlarıyla konuşuyoruz.",
+      "Afrikalı gazetecilerden gelen mektup serimizde, okuyuculara dalgaların kırılmasından kaçınmaları tavsiye ediliyor.",
+      "BBC'nin haftalık The Boss serisi, dünyanın dört bir yanından farklı insanları profilliyor. Bu, denizde yüzmek için bir rehberdir.",
+      "BBC'nin haftalık The Waves serisine hoş geldiniz.",
+      "Yolcuların Stonehenge ziyaretçi merkezi kapandığında Salisbury'ye gitmeleri tavsiye ediliyor.",
+      "BBC'nin haftalık The Boss serisi, dünyanın dört bir yanından farklı iş liderlerini profilliyor. Bu, Stonehenge yolculuğuna bir rehberdir.",
+      "BBC'nin haftalık The Boss serisi Londra'dan Stonehenge'e kadar farklı rotaları profilliyor.",
+      "Stonehenge, dünyanın en ünlü yerlerinden biridir.",
+      "BBC'nin haftalık The Boss serisi, dünyanın dört bir yanından farklı iş liderlerini profilliyor. Bu, derinin nasıl uzatılacağına dair bir rehberdir.",
+      "Afrikalı gazetecilerden gelen mektup serimizde, okuyuculara deriyi ısıtmak için saç kurutma makinesi kullanmaları tavsiye ediliyor."
+    ]
+  },
+  "baseline_2": {
+    "approach": "EN article → MarianMT (TR text) → mT5 (TR summary)",
+    "models": [
+      "Helsinki-NLP/opus-mt-tc-big-en-tr",
+      "csebuetnlp/mT5_multilingual_XLSum"
+    ],
+    "scores": {
+      "ROUGE-1": 16.58,
+      "ROUGE-2": 3.34,
+      "ROUGE-L": 13.15
+    },
+    "predictions": [
+      "Koronavirüsle mücadelede kritik düşünme, hemşirelik satranç oyununa çok benzer.",
+      "Facebook'ta arkadaşlarınızla oturum açın.",
+      "Facebook'ta otomatik oturum açın.",
+      "Facebook'ta kapak fotoğraflarını gösteren bir düğme var.",
+      "Dünyanın dört bir yanında milyonlarca kedi var.",
+      "Daha fazla kilo aldığınız varsa, veterinere götürmeniz gerekir.",
+      "Dünyanın en kilolu kedisi olarak bilinen İngiltere'de, kalçaları ve kaburgaları arasındaki bölgeler, aşırı kiloluk olup olmadığını muayene etmek gerekiyor.",
+      "Daha iyi bir diyet planınız var mı?",
+      "Yüksek yoğunluklu kardiyo egzersizler, vücut yağlarını yakmaya yardımcı olabilir.",
+      "Dünyanın birçok yerinde ücretsiz bir dil kodlaması uygulaması geliştiriliyor.",
+      "Bilgisayar programlama sadece bir hobi olabilir.",
+      "Dünyanın en güçlü kürek çekme yöntemi olan su.",
+      "Dünyanın dört bir yanından insanlar vücut tahtalarını iterek yüzmeye başladı.",
+      "Dalganın farklı kısmlarını anlamak çok kolay.",
+      "İngiltere'nin başkenti Londra'da hangi tren istasyonlarına gitmek istiyorsunuz?",
+      "İngiltere'ye seyahat etmek isteyen çok sayıda kişi, bir araba kiralayabilir.",
+      "İngiltere'nin başkenti Londra'nın merkezinde bulunan Stonehenge ve Amesbury kentleri, otobüste seyahat etmek için çok sayıda rota bulunuyor.",
+      "İngiltere'nin başkenti Londra'da bulunan Stonehenge'i ziyaret etmek için tur organizasyonu kuruluyor.",
+      "Dünyanın dört bir yanında deri çantanız da giderek uzanır.",
+      "Dünyanın en çok kullanılan saç kurutma makinesi, deriyi ısıtmak için kullanılıyor."
+    ]
+  },
+  "references_tr": [
+    "Eleştirel düşünün. Etkili iletişim kurun. Detay odaklı olun. Verimli bir şekilde organize edin. Fiziksel dayanıklılığı koruyun. Tepki verin ve hızlı düşünün.",
+    "Facebook uygulamasını açın. Arkadaşınızın profiline gidin.  düğmesine dokunun. Menüden Dostluk Gör'e dokunun. Aşağı kaydırın ve Tüm Fotoğrafları Gör'e dokunun.",
+    "Facebook uygulamasını açın. Ana Sayfa düğmesine dokunun. Arkadaşınızın profiline gidin. dokunun Daha fazla. Menüden Dostluk Gör'e dokunun. Aşağı kaydırın ve Tüm Fotoğraflara Bak'a dokunun.",
+    "Facebook.com'u bir web tarayıcısında açın. Arkadaşınızın profiline gidin. düğmesine tıklayın. Menüden Dostluk Gör'e tıklayın. Tüm fotoğraflarınızı birlikte görmek için aşağı kaydırın. Yakınlaştırmak için bir fotoğrafa dokunun.",
+    "Kedinizi nasıl beslediğinizi değiştirin. Egzersizi teşvik edin. Diyet tedavilerine gidin. Kedinizin ağırlığını izleyin.",
+    "Veterinerinizle randevu alın. Kedinizin kilo alımının nedenini belirleyin. Kedinizin diyetini veterinerinizle tartışın.",
+    "Kedinize farklı açılardan bakın. Kedinizin kaburgalarına dokunun. Kedinizin kuyruğunun tabanını inceleyin. Diğer kemikli bölgeleri kontrol edin. Sarkık bir göbek için aşırı endişe etmeyin.",
+    "Bir hafta boyunca bir yemek günlüğü tutun. Kalori alımınızı günlük 500 kalori azaltın. Uygun porsiyon boyutlarını takip edin. Daha düşük kalorili yiyecekler seçin. Sıvı kalorileri sınırlayın. Fazla atıştırmayı kesin.",
+    "Yüksek yoğunluklu kardiyovasküler egzersizi haftada 4 ila 5 gün yapın. Haftada en az 30 dakika, 5 gün egzersiz yapın. Çömelmeler yapın. Akciğerler yapın. Kalça artışları yapın. Köprü egzersizine ekleyin. Pliseleri dahil edin.",
+    "Hangi dili seçtiğiniz konusunda çok fazla endişelenmeyin. Seçtiğiniz dil için çevrimiçi olarak ücretsiz kaynaklar bulun. İyi bir metin editörü indirin. Gerekli derleyicileri indirin. İlk projenizi başlatın. Tüm kodunuzu yorumlayın. Diğer programları veya web projelerini ayırın.",
+    "Dersleri alın. Bilginizi genişletin. Daha fazla dil öğrenin. Sabırlı olun. Başkalarıyla çalışmayı öğrenin Kodlama becerilerinizi uygulayabileceğiniz bir iş edinin. Diğer programcılarla bağlantı kurun. Uygulama, uygulama, uygulama.",
+    "Kürek çekin, dalganızı bulun, dalganın yüzüne doğru ilerleyin.",
+    "Önce güvenliği koyun. Tasma alın. Bir su tulumu veya döküntü bekçisi alın. Yüzgeçler ve yüzgeç çorapları alın. Doğru pozisyonu uygulayın. Suya yürüyün.",
+    "Dalga terminolojisini öğrenin. Tahtanın parçalarını öğrenin. Oyalanmayı öğrenin.",
+    "Tren programını kontrol edin. Biletinizi alın. Treni Salisbury İstasyonu'na sürün. Yerel otobüse binin.",
+    "Arabanız yoksa araç kiralayın. Yol kapatmalarını kontrol edin. Zamanınızı ayarlayın. Konumunuzu kontrol edin. Arabanızı park edin. Mekikleri alın.",
+    "Heathrow Havaalanı veya Victoria Koç İstasyonu'ndan başlayın. Bilet satın alın. Otobüsle Amesbury'ye gidin. Stonehenge'e yürüyün veya bir taksiye binin.",
+    "Birden fazla varış noktasına gitmek isteyip istemediğinize karar verin. Bir veya iki günlük bir tur seçin. Bir tur şirketi seçin. Bir bilet satın alın. Turunuzu yapın.",
+    "Evde eşyayı giyerek streç deri giysiler. Onları germek için deri aksesuarlar. Onları germek için deri kayışları veya aksesuarları aşağı tartın.",
+    "Deriyi ısıtmak için bir saç kurutma makinesi kullanın. Ayakkabıları ısıtıyorsanız kalın çoraplar giyin. Isıtmadan sonra esnetmek istediğiniz kıyafetleri giyin."
+  ],
+  "references_en": [
+    "Think critically. Communicate effectively. Be detail-oriented. Organize efficiently. Maintain physical stamina. React and think quickly.",
+    "Open the Facebook app. Go to your friend’s profile. Tap the  ⁝  button. Tap See Friendship from the menu. Scroll down and tap on See All Photos.",
+    "Open the Facebook app. Tap the Home button. Go to your friend’s profile. Tap ••• More. Tap See Friendship from the menu. Scroll down and tap See All Photos.",
+    "Open Facebook.com in a web browser. Go to your friend’s profile. Click the ••• button. Click on See Friendship from the menu. Scroll down to see all of your photos together. Tap on a photo to zoom in.",
+    "Change how you feed your cat. Encourage exercise. Go for diet treats. Monitor your cat's weight.",
+    "Make an appointment with your vet. Determine the cause of your cat's weight gain. Discuss your cat's diet with your vet.",
+    "Look at your cat from different angles. Touch your cat's ribs. Examine the base of your cat's tail. Check other bony areas. Do not be overly concerned about a saggy belly.",
+    "Keep a food journal for a week. Reduce your caloric intake by 500 calories daily. Follow appropriate portion sizes. Choose lower calorie foods. Limit liquid calories. Cut out excess snacking.",
+    "Do high-intensity cardiovascular exercise 4 to 5 days per week. Exercise for at least 30 minutes, 5 days per week. Do squats. Do lunges. Do hip raises. Add in the bridge exercise. Include plies.",
+    "Don't worry too much about what language you pick. Find free resources online for the language you choose. Download a good text editor. Download any necessary compilers. Start your first project. Comment all of your code. Pick apart other programs or web projects.",
+    "Take classes. Expand your knowledge. Learn more languages. Be patient. Learn to work with others Get a job where you can practice your coding skills. Connect with other programmers. Practice, practice, practice.",
+    "Paddle out. Find your wave. Travel down the face of the wave.",
+    "Put safety first. Get a leash. Get a wetsuit or a rash guard. Get fins and fin socks. Practice the correct position. Walk into the water.",
+    "Learn the wave terminology. Learn the parts of the board. Learn to stall.",
+    "Check the train schedule. Buy your ticket. Ride the train to Salisbury Station. Take the local bus.",
+    "Rent a car if you don’t have one. Check for road closures. Budget your time. Check directions for your location. Park your car. Take the shuttle.",
+    "Start at Heathrow Airport or Victoria Coach Station. Purchase tickets. Take the bus to Amesbury. Walk or take a cab to Stonehenge.",
+    "Decide if you want to go to multiple destinations. Choose a one or two day tour. Select a tour company. Purchase a ticket. Take your tour.",
+    "Stretch leather apparel by wearing the item around the house. Stuff leather accessories to stretch them out. Weigh down leather straps or accessories to stretch them.",
+    "Use a hairdryer to heat up the leather. Wear thick socks if heating shoes. Put on clothing you’d like to stretch out after heating it."
+  ]
+}
